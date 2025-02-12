@@ -1,0 +1,11 @@
+services:
+  - name: my-php-app
+    type: web
+    env: docker
+    repo: https://github.com/Phanurat/pha-render-web
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: APP_ENV
+        value: production
+    autoDeploy: true
